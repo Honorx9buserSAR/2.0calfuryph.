@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.page {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.flower {
+    font-size: 5rem;
+    animation: flowerAnimation 5s infinite alternate;
+}
+
+.intro-text h1, .thank-you-text h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.thank-you-text a {
+    color: #ff69b4;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+@keyframes flowerAnimation {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+#page1 {
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page2 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page3 {
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .flower {
+        font-size: 3rem;
+    }
+
+    .intro-text h1, .thank-you-text h1 {
+        font-size: 2rem;
+    }
+
+    .thank-you-text a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .flower {
+        font-size: 2rem;
+    }
+
+    .intro-text h1, .thank-you-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .thank-you-text a {
+        font-size: 1rem;
+    }
+}
